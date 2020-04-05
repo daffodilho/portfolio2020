@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://unpkg.com/vue"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -11,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <main id="folio">
         <section id="masthead">
             <div id="visual"></div>
 
@@ -35,75 +38,71 @@
                 <h2>Here are a few of my recent works.  This list includes projects related to web design, web development, motion design, and graphic design.</h2>
                 <i class="fas fa-arrow-down"></i>
             </div>
-            <div class="row pb">
+
+            <div class="row dt" @click.prevent="showdt">
                 <h2>Doris Tang</h2>
-                <div class="row-ctn">
-                    <div class="row-scroll pb-scroll">
-                        <img src="images/pb-2.png" alt="">
+                <div :class="{hidden: hidedt, rowCtn: yes}">
+                    <div class="row-scroll dt-scroll">
+                        
 
                         <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Doris Tang is an audio production company that specializes in sound design for commercials, music videos, and other music projects.
+                        
+                        The end-goal is to produce a brand that is professional, clean, and sleek.
                         Project Type:<br>Branding<br><br>
                         Project Role:<br>Graphic Designer</h3>
 
                         <img src="images/pb-1.jpg" alt="">
-
-                        <h4>Doris Tang is an audio production company that specializes in sound design for commercials, music videos, and other music projects.<br><br>
-                        
-                        The end-goal is to produce a brand that is professional, clean, and sleek.</h4>
+                        <img src="images/pb-2.png" alt="">
 
                     </div>
                 </div>
             </div>
 
-            <div class="row apr">
+            <div class="row ss" @click.prevent="showss">
                 <h2>Sports Science</h2>
-                <div class="row-ctn">
-                    <div class="row-scroll apr-scroll">
+                <div :class="{hidden: hidess, rowCtn: yes}">
+                    <div class="row-scroll ss-scroll">
                         <h3>Sports Science is a video project inspired by Heads Up Display and Graphic User Interface designs (HUD + GUIS). <br><br>
+                            There are two parts to this project - the video bumper and the main video.  Check the case study for this project to view the full video.<br><br>HUD elements are used throughout the videos to visualize data and display information. 
                         Project Type:<br>Motion Design<br><br>
                         Project Role:<br>Motion Designer</h3>
 
-                        <video src="images/apr-1.mp4" poster="images/apr-1.png"controls></video>
-                        <img src="images/apr-2.jpg" alt="">
+                        <video src="images/ss.mp4" poster="images/ss1.jpg"controls></video>
+                        <img src="images/ss2.jpg" alt="">
 
-                        <h4>There are two parts to this project - the video bumper and the main video.  Check the case study for this project to view the full video.<br><br>HUD elements are used throughout the videos to visualize data and display information. <br><br>
-                        
-                        </h4>
-
-                        <img src="images/apr-3.png" alt="">
+                        <img src="images/ss3.jpg" alt="">
                         
                     </div>
                 </div>
             </div>
 
-            <div class="row arb">
+            <div class="row abr" @click.prevent="showabr">
                 <h2>Arbora</h2>
-                <div class="row-ctn">
-                    <div class="row-scroll arb-scroll">
-                        <video src="images/arb-1.mp4" poster="images/arb-1.png"controls></video>
+                <div :class="{hidden: hideabr, rowCtn: yes}">
+                    <div class="row-scroll abr-scroll">
+                       
 
                         <h3>Sports Science is a video project inspired by Heads Up Display and Graphic User Interface designs (HUD + GUIS). <br><br>
                         Project Type:<br>Product Design, 3D Animation<br><br>
                         Project Role:<br>Graphic Designer</h3>
 
+                        <img src="images/abr6.jpg" alt="">
+                        <img src="images/abr2.jpg" alt="">
+                        <img src="images/abr3.jpg" alt="">
+                        <img src="images/abr4.jpg" alt="">
                         
-                        <img src="images/arb-2.png" alt="">
-                        <img src="images/arb-3.png" alt="">
-                        <img src="images/arb-4.png" alt="">
 
-                        <h4>There are two parts to this project - the video bumper and the main video.  Check the case study for this project to view the full video.<br><br>HUD elements are used throughout the videos to visualize data and display information. <br><br>
-                        
-                        </h4>
-
-                        <video src="images/arb-5.mp4" poster="" controls></video>
+                        <video src="images/abr5.mp4" poster="" controls></video>
+                        <video src="images/abr1.mp4" poster="images/arb-1.png"controls></video>
                         
                     </div>
                 </div>
             </div>
 
-            <div class="row cr">
+            <div class="row cr" @click.prevent="showcr">
                 <h2>Chatrooms!</h2>
-                <div class="row-ctn">
+                <div :class="{hidden: hidecr, rowCtn: yes}">
                     <div class="row-scroll cr-scroll">
 
                         <img src="images/cr-1.jpg" alt="">
@@ -119,28 +118,105 @@
                 </div>
             </div>
 
-            <div class="row sn">
-                <h2>Float:left</h2>
+            <div class="row je" @click.prevent="showje">
+                <h2>Jet Engine Model</h2>
+                <div :class="{hidden: hideje, rowCtn: yes}">
+                    <div class="row-scroll je-scroll">
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                        <img src="images/je1.jpg" alt="">
+                        <img src="images/je2.jpg" alt="">
+                        <img src="images/je3.jpg" alt="">
+
+                        <video src="images/je4.mp4" poster="" controls></video>
+                    </div>
+                </div>
             </div>
 
-            <div class="row sn">
+            <div class="row ifg" @click.prevent="showifg">
                 <h2>Infographics</h2>
+                <div :class="{hidden: hideifg, rowCtn: yes}">
+                    <div class="row-scroll ifg-scroll">
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                        <img src="images/inf.jpg" alt="">    
+                        <img src="images/inf2.jpg" alt="">
+                        <img src="images/inf3.jpg" alt="">    
+                        <img src="images/inf4.jpg" alt="">
+                        
+                    </div>
+                </div>
             </div>
 
-            <div class="row sn">
-                <h2>Morphing</h2>
+            <div class="row sn" @click.prevent="showsn">
+                <h2>Sports Net</h2>
+                <div :class="{hidden: hidesn, rowCtn: yes}">
+                    <div class="row-scroll sn-scroll">
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                        <img src="images/sportsnet1.jpg" alt="">
+                        <img src="images/sportsnet2.jpg" alt="">
+                        <img src="images/sportsnet3.jpg" alt="">
+                        <img src="images/sportsnet4.jpg" alt="">
+                        <img src="images/sportsnet5.jpg" alt="">
+
+                    </div>
+                </div>
             </div>
 
-            <div class="row sn">
-                <h2>Music Mixer</h2>
+            <div class="row msc" @click.prevent="showmsc">
+                <h2>Musical Soda Cans</h2>
+                <div :class="{hidden: hidemsc, rowCtn: yes}">
+                    <div class="row-scroll msc-scroll">
+                        <img src="images/msc.jpg" alt="">
+                        
+
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="row sn">
+            <div class="row os" @click.prevent="showos">
                 <h2>Ontario Summer</h2>
+                <div :class="{hidden: hideos, rowCtn: yes}">
+                    <div class="row-scroll os-scroll">
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                        <img src="images/os.jpg" alt="">
+                        <img src="images/os4.jpg" alt="">
+                        <img src="images/os2.jpg" alt="">
+                        <img src="images/os3.jpg" alt="">
+                    </div>
+                </div>
             </div>
 
-            <div class="row ig">
-                <h2>Sportsnet</h2>
+            <div class="row mp" @click.prevent="showmp">
+                <h2>Morphing</h2>
+                <div :class="{hidden: hidemp, rowCtn: yes}">
+                    <div class="row-scroll mp-scroll">
+                        <h3>A brand is more than a name.  It is the color, the feel, the characteristics, that makes a brand, a brand.<br><br>
+                            Project Type:<br>Branding<br><br>
+                            Project Role:<br>Graphic Designer</h3>
+
+                        <img src="images/morph1.jpg" alt="">
+                        <img src="images/morph2.jpg" alt="">
+                        <img src="images/morph3.jpg" alt="">
+                        <img src="images/morph4.jpg" alt="">
+                        <img src="images/morph5.jpg" alt="">
+
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -177,5 +253,7 @@
     <footer>
         <p>2020 © DaffodilHo. All Rights Reserved.</p>
     </footer>
+
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
