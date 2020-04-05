@@ -1,42 +1,54 @@
 <?php
 
+require 'vendor/autoload.php';
+
 if(empty($_POST)){
     echo 'You forgot a field?';
     exit;
 }
 
-// Validate all data
-$name = '';
-$email = '';
-$subject = 'mail from portfolio';
-$message = '';
-$recipient = 'daffodilho@gmail.com';
+$from = new SendGrid\Email(null, "test@example.com");
+$subject = "Hello World from the SendGrid PHP Library!";
+$to = new SendGrid\Email(null, "me@example.com");
+$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-if(isset($_POST['name'])){
-    $name = filter_var($_POST['name'],FILTER_SANITIZE_STRING);
-}
+$apiKey = getenv('SENDGRID_API_KEY');
+$sg = new \SendGrid($apiKey);
 
-if(isset($_POST['email'])){
-    $email = str_replace(array("\r", "\n", "%0a", "%0d"), '',$_POST['email']);
-    $email = filter_var($email,FILTER_VALIDATE_EMAIL);
-}
+$response = $sg->client->mail()->send()->post($mail);
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
 
-if(isset($_POST['message'])){
-    $message = $_POST['message'];
-}
+// // Validate all data
+// $name = '';
+// $email = '';
+// $subject = 'mail from portfolio';
+// $message = '';
+// $recipient = 'daffodilho@gmail.com';
 
-// Send out email
-$headers = array(
-    'FROM'=>'noreply@test.ca',
-    'Reply-To'=> ".$name.'<'.$email.'>'."
-);
+// if(isset($_POST['name'])){
+//     $name = filter_var($_POST['name'],FILTER_SANITIZE_STRING);
+// }
 
-echo $message;
-echo $recipient;
-var_dump ($headers);
+// if(isset($_POST['email'])){
+//     $email = str_replace(array("\r", "\n", "%0a", "%0d"), '',$_POST['email']);
+//     $email = filter_var($email,FILTER_VALIDATE_EMAIL);
+// }
 
-if(mail($recipient, $subject, $message, $headers)){
-    echo '<p>Thank you for contacting us, '.$name.'</p>';
-}else{
-    echo '<p>We are sorry but the email did not go through</p>';
-}
+// if(isset($_POST['message'])){
+//     $message = $_POST['message'];
+// }
+
+// // Send out email
+// $headers = array(
+//     'FROM'=>'noreply@test.ca',
+//     'Reply-To'=> ".$name.'<'.$email.'>'."
+// );
+
+// if(mail($recipient, $subject, $message, $headers)){
+//     echo '<p>Thank you for contacting us, '.$name.'</p>';
+// }else{
+//     echo '<p>We are sorry but the email did not go through</p>';
+// }
