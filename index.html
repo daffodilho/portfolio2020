@@ -239,13 +239,13 @@
         </section>
 
         <section id="contact">
-            <form action="">
+            <form action="data/contact.php" method="POST">
                 <h2>Contact me whenever.</h2>
                 <p>Or if you prefer direct email -> daffodilho@gmail.com</p>
-                <input type="text">
-                <input type="text">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Send</button>
+                <input type="text" name="name" placeholder="Your name">
+                <input type="text" name="email" placeholder="Your email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <button type="submit" name="submit">Send</button>
             </form>
         </section>
     </main>
