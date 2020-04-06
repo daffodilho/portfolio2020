@@ -56,3 +56,4 @@ echo $response->body();
 // }else{
 //     echo '<p>We are sorry but the email did not go through</p>';
 // }
+?>
