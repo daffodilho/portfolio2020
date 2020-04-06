@@ -39,9 +39,10 @@
             font-family: 'Sen', sans-serif;
         }
 
-        a {
+        #mymail {
             text-decoration: none;
             color: $dark;
+            border: none;
         }
 
         #submit {
@@ -54,6 +55,7 @@
             text-align: center;
             color: $dark;
             text-decoration: none;
+            cursor: pointer;
         }
 
         #submit:hover {
