@@ -55,7 +55,7 @@
         height: 100%;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         background-color: #fff;
 
         .row-text {
@@ -95,43 +95,43 @@
 // scroll length for works
 
 .cr-scroll {
-    width: 2350px;
+    width: 2200px;
 }
 
 .je-scroll {
-    width: 3700px;
+    width: 3300px;
 }
 
 .ifg-scroll {
-    width: 1650px;
+    width: 1600px;
 }
 
 .sn-scroll {
-    width: 4550px;
+    width: 4100px;
 }
 
 .msc-scroll {
-    width: 4000px;
+    width: 3600px;
 }
 
 .os-scroll {
-    width: 3000px;
+    width: 2700px;
 }
 
 .mp-scroll {
-    width: 4550px;
+    width: 4100px;
 }
 
 .dt-scroll {
-    width: 1500px;
+    width: 1450px;
 }
 
 .ss-scroll {
-    width: 2850px;
+    width: 2600px;
 }
 
 .abr-scroll {
-    width: 2400px;
+    width: 2200px;
 }
 
 @media screen and (min-width: 768px){
