@@ -11,7 +11,7 @@ require 'vendor/autoload.php';
 // $content = new SendGrid\Content("text/plain", "Hello, Email!");
 // $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-// $apiKey = getenv('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');
+// $apiKey = getenv('SENDGRID_API_KEY');
 // $sg = new \SendGrid($apiKey);
 
 // $response = $sg->client->mail()->send()->post($mail);
