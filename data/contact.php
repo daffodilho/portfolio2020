@@ -1,15 +1,14 @@
 <?php
 
-// if(empty($_POST)){
-//     echo 'You forgot a field?';
-//     exit;
-// }
+if(empty($_POST)){
+    echo 'You forgot a field?';
+    exit;
+}
+
+var_dump($_POST);
 
 // If you are using Composer
 require 'vendor/autoload.php';
-
-// If you are not using Composer (recommended)
-// require("path/to/sendgrid-php/sendgrid-php.php");
 
 $from = new SendGrid\Email(null, "daffodilho.com");
 $subject = "Hello World from the SendGrid PHP Library!";
@@ -24,6 +23,30 @@ $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
 echo $response->headers();
 echo $response->body();
+
+if($response){
+    echo 'Yay, message sent.';
+}else {
+    echo 'Something went wrong.';
+}
+
+// $email = new \SendGrid\Mail\Mail(); 
+// $email->setFrom("test@example.com", "Example User");
+// $email->setSubject("Sending with SendGrid is Fun");
+// $email->addTo("test@example.com", "Example User");
+// $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+// $email->addContent(
+//     "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+// );
+// $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+// try {
+//     $response = $sendgrid->send($email);
+//     print $response->statusCode() . "\n";
+//     print_r($response->headers());
+//     print $response->body() . "\n";
+// } catch (Exception $e) {
+//     echo 'Caught exception: '. $e->getMessage() ."\n";
+// }
 
 // // Validate all data
 // $name = '';
