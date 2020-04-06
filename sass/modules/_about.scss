@@ -1,6 +1,6 @@
 #about {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     border-top: 1px solid $dark;
     border-bottom: 1px solid $dark;
     display: flex;
@@ -8,7 +8,7 @@
 
     .about-text {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         border-bottom: 1px solid $dark;
         display: flex;
         flex-flow: column nowrap;
@@ -37,7 +37,7 @@
             text-decoration: none;
             width: 20%;
             color: $dark;
-            font-size: 1.4em;
+            font-size: 0.8em;
             border: 1px solid $dark;
             background-color: transparent;
             padding: 5px;
@@ -54,9 +54,9 @@
             display: flex;
 
             li a {
-                font-size: 2em;
+                font-size: 1.5em;
                 color: $dark;
-                padding-right: 15px;
+                padding-right: 12px;
             }
 
             li a:hover {
@@ -68,7 +68,7 @@
 
     #about-img {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         overflow: hidden;
@@ -80,7 +80,7 @@
             img {
                 width: 100%;
                 opacity: 0.9;
-                margin-top: -100px;
+                margin-top: -60px;
             }
         }
     }
@@ -111,6 +111,18 @@
                 line-height: 1.4em;
             }
     
+            ul li a {
+                font-size: 2em;
+            }
+
+            #resume-link {
+                width: 20%;
+                font-size: 1.4em;
+                border: 1px solid $dark;
+                background-color: transparent;
+                padding: 5px;
+                text-align: center;
+            }
             
         }
     
