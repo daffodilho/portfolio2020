@@ -50,6 +50,12 @@
             color: $dark;
             text-decoration: none;
         }
+
+        a:hover {
+            background-color: $main;
+            color: $light;
+            transition: all 0.2s ease;
+        }
     }
 }
 
