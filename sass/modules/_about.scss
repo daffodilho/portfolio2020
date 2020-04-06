@@ -44,6 +44,12 @@
             text-align: center;
         }
 
+        #resume-link:hover {
+            background-color: $main;
+            color: $light;
+            transition: all 0.2s ease;
+        }
+
         ul {
             display: flex;
 
@@ -51,6 +57,11 @@
                 font-size: 2em;
                 color: $dark;
                 padding-right: 15px;
+            }
+
+            li a:hover {
+                color: $main;
+                transition: all 0.2s ease; 
             }
         }
     }

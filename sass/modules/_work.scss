@@ -28,8 +28,8 @@
     width: 100%;
     height: 100%;
     border-top: 1px solid $darkacc;
-    // background-color: $light;
     background-color: $light;
+    cursor: pointer;
 
     h2 {
         font-size: 1.6em;
@@ -56,6 +56,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        background-color: #fff;
 
         .row-text {
             display: flex;
@@ -67,6 +68,10 @@
                 font-size: 1em;
                 line-height: 1.2em;
                 color: $dark;
+            }
+
+            a {
+                padding: 30px 30px 0;
             }
         }
 
@@ -82,55 +87,51 @@
     }
 }
 
+.row:hover {
+    background-color: $main;
+    transition: all 0.3s ease;
+}
+
 // scroll length for works
-.dt-scroll {
-    background-color: $lightpb;
-    width: 1500px;
-}
-
-.ss-scroll {
-    background-color: $lightapr;
-    width: 2850px;
-}
-
-.abr-scroll {
-    background-color: $lightarb;
-    width: 2400px;
-}
 
 .cr-scroll {
-    background-color: #fff;
     width: 2350px;
 }
 
 .je-scroll {
-    background-color: #fff;
     width: 3700px;
 }
 
 .ifg-scroll {
-    background-color: #fff;
     width: 1650px;
 }
 
 .sn-scroll {
-    background-color: #fff;
     width: 4550px;
 }
 
 .msc-scroll {
-    background-color: #fff;
     width: 4000px;
 }
 
 .os-scroll {
-    background-color: #fff;
     width: 3000px;
 }
 
 .mp-scroll {
-    background-color: #fff;
     width: 4550px;
+}
+
+.dt-scroll {
+    width: 1500px;
+}
+
+.ss-scroll {
+    width: 2850px;
+}
+
+.abr-scroll {
+    width: 2400px;
 }
 
 @media screen and (min-width: 768px){
