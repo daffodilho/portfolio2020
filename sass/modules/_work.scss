@@ -40,7 +40,7 @@
 
     .rowCtn {
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         overflow: scroll;
         scrollbar-width: none; // firefox
         -ms-overflow-style: none; // IE
@@ -53,22 +53,26 @@
 
     .row-scroll {
         height: 100%;
-        // background-color: $light;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
 
+        .row-text {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 320px;
+        
+            h3 {
+                padding: 30px 30px 0;
+                font-size: 1em;
+                line-height: 1.2em;
+                color: $dark;
+            }
+        }
+
         img {
             // width: 300px;
             height: 100%;
-        }
-
-        h3 {
-            width: 400px;
-            padding: 0 30px;
-            font-size: 1em;
-            line-height: 1.2em;
-            color: $dark;
         }
 
         video {
@@ -80,36 +84,54 @@
 
 // scroll length for works
 .dt-scroll {
-    // background-color: $lightpb;
-    width: 1800px;
+    background-color: $lightpb;
+    width: 1500px;
 }
 
 .ss-scroll {
-    // background-color: $lightapr;
-    width: 2700px;
+    background-color: $lightapr;
+    width: 2850px;
 }
 
 .abr-scroll {
-    // background-color: $lightarb;
+    background-color: $lightarb;
     width: 2400px;
 }
 
 .cr-scroll {
     background-color: #fff;
-    width: 2000px;
+    width: 2350px;
 }
 
 .je-scroll {
     background-color: #fff;
-    width: 2000px;
+    width: 3700px;
 }
 
-.morph-scroll {
+.ifg-scroll {
     background-color: #fff;
-    width: 2000px;
+    width: 1650px;
 }
 
+.sn-scroll {
+    background-color: #fff;
+    width: 4550px;
+}
 
+.msc-scroll {
+    background-color: #fff;
+    width: 4000px;
+}
+
+.os-scroll {
+    background-color: #fff;
+    width: 3000px;
+}
+
+.mp-scroll {
+    background-color: #fff;
+    width: 4550px;
+}
 
 @media screen and (min-width: 768px){
 #work {

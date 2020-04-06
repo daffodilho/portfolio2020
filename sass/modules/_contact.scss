@@ -39,7 +39,7 @@
             font-family: 'Sen', sans-serif;
         }
 
-        button {
+        a {
             width: 20%;
             border: 1px solid $dark;
             background-color: transparent;
@@ -48,6 +48,7 @@
             font-family: 'Sen', sans-serif;
             text-align: center;
             color: $dark;
+            text-decoration: none;
         }
     }
 }
